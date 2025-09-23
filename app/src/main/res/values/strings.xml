@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SignUpPage</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_signup">Sign Up</string>
+    <string name="title_activity_main">Sign Up App\n</string>
+</resources>

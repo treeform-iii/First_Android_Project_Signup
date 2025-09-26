@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         val signUpButton = findViewById<Button>(R.id.buttonSignUp)
         val birthdateField = findViewById<com.google.android.material.textfield.TextInputEditText>(R.id.editTextBirthdate)
 
+        // On birthdate field tap
         birthdateField.setOnClickListener {
             val datePicker =
                 MaterialDatePicker.Builder.datePicker()
@@ -26,14 +27,13 @@ class MainActivity : AppCompatActivity() {
                     .build()
 
             datePicker.addOnPositiveButtonClickListener { selection ->
-                // selection is a timestamp (milliseconds since epoch)
-                birthdateField.setText(datePicker.headerText) // headerText = nice formatted date
+                birthdateField.setText(datePicker.headerText)
             }
 
             datePicker.show(supportFragmentManager, "birthdate_picker")
         }
 
-
+        // On sign up button tap
         signUpButton.setOnClickListener {
             val username = usernameField.text.toString()
             val email = emailField.text.toString()

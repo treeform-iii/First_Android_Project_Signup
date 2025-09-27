@@ -78,7 +78,7 @@
             android:id="@+id/editTextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password Here MF"
+            android:hint="Password"
             android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -98,7 +98,7 @@
             android:id="@+id/editTextConfirmPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Confirm Password Here MF"
+            android:hint="Confirm Password"
             android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>

@@ -44,7 +44,6 @@ class MainActivity : AppCompatActivity() {
             val password = passwordField.text.toString()
             val confirmPassword = confirmPasswordField.text.toString()
 
-            // Get selected gender
             val selectedGenderId = genderGroup.checkedRadioButtonId
             val gender = if (selectedGenderId != -1) {
                 val radioButton = findViewById<RadioButton>(selectedGenderId)
@@ -53,18 +52,20 @@ class MainActivity : AppCompatActivity() {
                 "Not Selected"
             }
 
-            // Show all input values in a Toast
-            Toast.makeText(
-                this,
-                "Signing up with:\n" +
-                        "Username: $username\n" +
-                        "Email: $email\n" +
-                        "Password: $password\n" +
-                        "Confirm Password: $confirmPassword\n" +
-                        "Birthdate: ${birthdateField.text}\n" +
-                        "Gender: $gender",
-                Toast.LENGTH_LONG
-            ).show()
+            if (password != confirmPassword) {
+                Toast.makeText(
+                    this,
+                    "Passwords do not match",
+                    Toast.LENGTH_LONG
+                ).show()
+            } else {
+                // Show all input values in a Toast
+                Toast.makeText(
+                    this,
+                    "Signing in, welcome $username",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
         }
     }
 }
